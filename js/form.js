@@ -23,7 +23,6 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*Order/Pedidos*%0A%0A
 		*Name/Nombre:*%0A
 		${cliente}%0A
-		*Indica la fecha de tu reserva*%0A
 		*Cake Flavor/Sabor:*%0A
     		${sabortorta}%0A
    		*Filling Flavor/Relleno:*%0A
@@ -32,8 +31,9 @@ document.querySelector("#submit").addEventListener("click", e => {
     		${cobertura}%0A
     		*Slice/Porciones:*%0A
     		${porciones}%0A
+		*Date Needed:*%0A
 		${fecha}%0A
-		*Indica la hora de tu reserva*%0A
+		*Time Needed*%0A
 		${hora}%0A
 		*Empleado de preferencia*%0A
 		${empleado}%0A
