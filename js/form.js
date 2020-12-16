@@ -35,9 +35,9 @@ document.querySelector("#submit").addEventListener("click", e => {
 		${fecha}%0A
 		*Time Needed*%0A
 		${hora}%0A
-		*Empleado de preferencia*%0A
+		*PickUp/Delivery*%0A
 		${empleado}%0A
-		*¿Cuál es el servicio que se desea realizar?*%0A
+		*Additional*%0A
 		${servicio}`;
 
   if (cliente === "" || fecha === "" || hora === "") {
