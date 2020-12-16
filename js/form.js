@@ -5,40 +5,28 @@ document.querySelector("#submit").addEventListener("click", e => {
   let telefono = "19549099849";
 
   let cliente = document.querySelector("#cliente").value;
-  let sabortorta = document.querySelector("#sabortorta").value;
-  let relleno = document.querySelector("#relleno").value;
-  let cobertura = document.querySelector("#cobertura").value;
-  let porciones = document.querySelector("#porciones").value;
   let fecha = document.querySelector("#fecha").value;
   let hora = document.querySelector("#hora").value;
-  let entrega = document.querySelector("#entrega").value;
-  let additional = document.querySelector("#additional").value;
+  let empleado = document.querySelector("#empleado").value;
+  let servicio = document.querySelector("#servicio").value;
   let resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
   resp.classList.remove("send");
 
   let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
-		*_Ark Cakes_*%0A
-		*Order/Pedidos*%0A%0A
-		*Name/Nombre:*%0A
-    ${cliente}%0A
-    *Cake Flavor/Sabor:*%0A
-    ${sabortorta}%0A
-    *Filling Flavor/Relleno:*%0A
-    ${relleno}%0A
-    *Icing Flavor/Cobertura:*%0A
-    ${cobertura}%0A
-    *Slice/Porciones:*%0A
-    ${porciones}%0A
-		*Date Needed:*%0A
+		*_MI NEGOCIO_*%0A
+		*Reservas*%0A%0A
+		*¿Cuál es tu nombre?*%0A
+		${cliente}%0A
+		*Indica la fecha de tu reserva*%0A
 		${fecha}%0A
-		*Time Needed*%0A
-    ${hora}%0A
-    *Delivery or Pickup:%0A
-    ${entrega}%0A
-		*Additional Cake Details*%0A
-    ${additional}`;
+		*Indica la hora de tu reserva*%0A
+		${hora}%0A
+		*Empleado de preferencia*%0A
+		${empleado}%0A
+		*¿Cuál es el servicio que se desea realizar?*%0A
+		${servicio}`;
 
   if (cliente === "" || fecha === "" || hora === "") {
     resp.classList.add("fail");
