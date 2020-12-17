@@ -10,9 +10,11 @@ document.querySelector("#submit").addEventListener("click", e => {
   let cobertura = document.querySelector("#cobertura").value;
   let porciones = document.querySelector("#porciones").value;
   let fecha = document.querySelector("#fecha").value;
+  let delivery = document.querySelector("#delivery").value;
+  let add = document.querySelector("#add").value;
   let hora = document.querySelector("#hora").value;
-  let empleado = document.querySelector("#empleado").value;
-  let servicio = document.querySelector("#servicio").value;
+  
+
   let resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
@@ -22,32 +24,34 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*_ARK CAKES_*%0A
 		*Order/Pedidos*%0A%0A
 		*Name/Nombre:*%0A
-		${cliente}%0A
-		*Cake Flavor/Sabor:*%0A
-    		${sabortorta}%0A
-   		*Filling Flavor/Relleno:*%0A
-    		${relleno}%0A
-    		*Icing Flavor/Cobertura:*%0A
-    		${cobertura}%0A
-    		*Slice/Porciones:*%0A
-    		${porciones}%0A
+      ${cliente}%0A
+    *Cake Flavor/Sabor:*%0A
+      ${sabortorta}%0A
+    *Filling Flavor/Relleno:*%0A
+      ${relleno}%0A
+    *Icing Flavor/Cobertura:*%0A
+      ${cobertura}%0A
+    *Slice/Porciones:*%0A
+      ${porciones}%0A
 		*Date Needed:*%0A
-		${fecha}%0A
-		*Time Needed*%0A
-		${hora}%0A
-		*PickUp/Delivery*%0A
-		${empleado}%0A
-		*Additional*%0A
-		${servicio}`;
+      ${fecha}%0A
+    *Time Needed:*%0A
+      ${hora}%0A
+    *Pickup/Delivery:*%0A
+      ${delivery}%0A
+    *Additional Information:*%0A
+      ${add}%0A
+		
+    `;
 
   if (cliente === "" || fecha === "" || hora === "") {
     resp.classList.add("fail");
-    resp.innerHTML = `Faltan algunos datos, ${cliente}`;
+    resp.innerHTML = `Please complete all the fields, ${cliente}`;
     return false;
   }
   resp.classList.remove("fail");
   resp.classList.add("send");
-  resp.innerHTML = `Se ha enviado tu reserva, ${cliente}`;
+  resp.innerHTML = `Your order has been sent., ${cliente}`;
 
   window.open(url);
 });
