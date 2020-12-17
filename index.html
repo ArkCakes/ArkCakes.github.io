@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ARK CAKES</title>
+    <title>Ark Cakes</title>
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
@@ -17,17 +17,17 @@
       <h1 class="formulario__titulo">Ark Cakes</h1>
       <h3 class="formulario__subtitulo">Order/Pedidos</h3>
       <p class="formulario__parrafo">
-        Llena este pequeño formulario para registrar tus pedidos.
+        Fill Out This Form To Make Your Order.
       </p>
 
-      <label for="cliente" class="formulario__label">Name/Nombre:</label>
+      <label for="cliente" class="formulario__label"><b>Name/Nombre:</b></label>
       <input
         id="cliente"
         type="text"
         class="formulario__input"
-        placeholder="Indica cuál es tu nombre completo"
+        placeholder="Full Name"
       />
-<label for="sabortorta" class="formulario__label">Cake Flavor/Sabor:</label>
+      <label for="sabortorta" class="formulario__label"><b>Cake Flavor/Sabor:</b></label>
       <select id="sabortorta" name="sabores__torta" class="formulario__input">
         <option>Vanilla/Vainilla</option>
         <option>Chocolate</option>
@@ -39,7 +39,7 @@
         <option>Rum/Ron</option>
       </select>
 
-      <label for="relleno" class="formulario__label">Filling Flavor/Relleno:</label>
+      <label for="relleno" class="formulario__label"><b>Filling Flavor/Relleno:</b></label>
       <select id="relleno" name="rellenos__torta" class="formulario__input">
         <option>Buttercream Italiano</option>
         <option>Ganache Chocolate</option>
@@ -48,18 +48,18 @@
         <option>Coconut/Coco</option>
         <option>Strawberry/Fresa</option>
         <option>Nutella/Nutela</option>
-        <option>Oreo Buttercream/Crema Oreo</option>
+        <option>Oreo Buttercream</option>
       </select>
 
-      <label for="cobertura" class="formulario__label">Icing Flavor/Cobertura:</label>
+      <label for="cobertura" class="formulario__label"><b>Icing Flavor/Cobertura:</b></label>
       <select id="cobertura" name="cobertura__torta" class="formulario__input">
-        <option>Vanilla Buttercream/Vainilla Buttercream</option>
-        <option>Italian Buttercream/Buttercream Italiano </option>
+        <option>Vanilla Buttercream</option>
+        <option>Italian Buttercream</option>
         <option>Chocolate Buttercream</option>
-        <option>Chocolate Ganache/ Ganache de Chocolate</option>
+        <option>Chocolate Ganache</option>
       </select>
 
-      <label for="porciones" class="formulario__label">Slice/Porciones:</label>
+      <label for="porciones" class="formulario__label"><b>Slice/Porciones:</b></label>
       <select id="porciones" name="porciones_Slice" class="formulario__input">
         <option>6"(Serves 10)</option>
         <option>7"(Serves 15)</option>
@@ -71,7 +71,7 @@
       </select>
 
       <label for="fecha" class="formulario__label"
-        >Date Needed</label
+        ><b>Date Needed:</b></label
       >
       <input
         id="fecha"
@@ -81,27 +81,25 @@
       />
 
       <label for="hora" class="formulario__label"
-        >Time Needed</label
+        ><b>Time Needed:</b></label
       >
       <input id="hora" type="time" class="formulario__input" />
 
-       <label for="empleado" class="formulario__label"
-        >Pickup/Delivery</label
-      >
-      <select id="empleado" name="listaempleados" class="formulario__input">
-        <option>PickUp/Recogida</option>
-        <option>Delivery/llevar</option>
-      </select>
+      <label for="delivery" class="formulario__label"><b>Pickup/Delivery:</b></label>
+      <select id="delivery" name="Pickup/Delivery" class="formulario__input">
+        <option>Pickup</option>
+        <option>Delivery</option>
+        </select>
 
+      <label for="Additional" class="formulario__label"><b>Additional Information:</b></label>
+      <input 
+        id="add"
+        type="text"
+        class="formulario__input"
+      />
       
-      <label for="servicio" class="formulario__label"
-        >Additional</label
-      >
-      <select id="servicio" name="listaservicios" class="formulario__input">
-        <option></option>
-       
-      </select>
 
+        
       <div id="respuesta"></div>
 
       <button id="submit" class="formulario__submit">Enviar a WhatsApp</button>
@@ -109,4 +107,5 @@
     <script src="js/form.js"></script>
   </body>
 </html>
+
 
